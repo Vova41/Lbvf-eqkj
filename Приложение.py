@@ -89,6 +89,27 @@ class Ui_Form(object):
         self.textBrowser = QtWidgets.QTextBrowser(self.Information)
         self.textBrowser.setGeometry(QtCore.QRect(0, 0, 441, 321))
         self.textBrowser.setObjectName("textBrowser")
+        self.suc = QtWidgets.QPushButton(self.Information)
+        self.suc.setGeometry(QtCore.QRect(60, 210, 110, 20))
+        self.suc.setObjectName("suc")
+        self.pril = QtWidgets.QPushButton(self.Information)
+        self.pril.setGeometry(QtCore.QRect(60, 250, 110, 20))
+        self.pril.setObjectName("pril")
+        self.glag = QtWidgets.QPushButton(self.Information)
+        self.glag.setGeometry(QtCore.QRect(60, 230, 110, 20))
+        self.glag.setObjectName("glag")
+        self.prich = QtWidgets.QPushButton(self.Information)
+        self.prich.setGeometry(QtCore.QRect(170, 230, 110, 20))
+        self.prich.setObjectName("prich")
+        self.deeprich = QtWidgets.QPushButton(self.Information)
+        self.deeprich.setGeometry(QtCore.QRect(170, 210, 110, 20))
+        self.deeprich.setObjectName("deeprich")
+        self.narech = QtWidgets.QPushButton(self.Information)
+        self.narech.setGeometry(QtCore.QRect(170, 250, 110, 20))
+        self.narech.setObjectName("narech")
+        self.label = QtWidgets.QLabel(self.Information)
+        self.label.setGeometry(QtCore.QRect(10, 210, 51, 20))
+        self.label.setObjectName("label")
         self.tabWidget.addTab(self.Information, "")
 
         self.retranslateUi(Form)
@@ -128,6 +149,13 @@ class Ui_Form(object):
 "<li style=\" font-size:8pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Среди предложенных в тесте слов выберите те, которые можно объяснить правилом, вспомните правила орфоэпии. Самые маленькие группы слов: прилагательные, деепричастия, наречия.</li>\n"
 "<li style=\" font-size:8pt;\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Если после этого все еще остались варианты, то вспомните слова, которые не подчиняются правилам или являются исключениями (такие слова как «клАла», «послАла», «откУпорить» и другие).</li></ol>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Для того, чтобы запомнить ударения, рекомендуется выучить правила. Слова нужно учить не вперемешку, а группами, объединенными общим звучанием.</span></p></body></html>"))
+        self.suc.setText(_translate("Form", "Существительные "))
+        self.pril.setText(_translate("Form", "Прилагательные"))
+        self.glag.setText(_translate("Form", "Глаголы"))
+        self.prich.setText(_translate("Form", "Причастия"))
+        self.deeprich.setText(_translate("Form", "Деепричастия"))
+        self.narech.setText(_translate("Form", "Наречия"))
+        self.label.setText(_translate("Form", "Правила:"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Information), _translate("Form", "Информация"))
     def fullen(self):
         self.pere = ApplicationData.task_and_response()
@@ -151,6 +179,9 @@ class Ui_Form(object):
             self.label_ans.setText(f"Неверно( \nПравильный ответ: {self.pere[1]}")
         else:
             self.label_ans.setText("Правильно!!!")
+
+    def ruls(self):
+        self.suc.clicked(ma)
 
 
 if __name__ == "__main__":
